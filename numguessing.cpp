@@ -20,7 +20,7 @@ int main(){
             std::cout<<"too low!"<<'\n';
         }
         else{
-            std::cout<<"correct! number os tries:"<< tries<<'\n';
+            std::cout<<"correct! number of tries:"<< tries<<'\n';
         }
 
 
