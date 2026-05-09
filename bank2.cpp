@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>//sets precision for floating point
 
 void showbalance(double balance);
 double deposit(double balance,double amount);
@@ -46,7 +47,7 @@ do{
 }
 
     void showbalance(double balance){
-    std::cout<<"you have "<<'$'<<balance<<" in your account "<<'\n';
+    std::cout<<"you have "<<'$'<<std::setprecision(2)<< std::fixed<< balance<<" in your account "<<'\n';
 }
     double deposit(double balance,double amount){
     std::cout<<"enter the amount to deposit "<<'\n';
@@ -57,7 +58,7 @@ do{
     }
     else {
         balance+=amount;
-        std::cout<<"you are deposting "<<'$'<< amount <<'\n';
+        std::cout<<"you are deposting "<<'$'<< std::setprecision(2)<<std::fixed<<amount <<'\n';
         std::cout<<"your new balance is "<<'$'<< balance <<'\n';
     }
     return balance;
@@ -73,7 +74,7 @@ do{
     else{
         balance-=amount;
         std::cout<<"successfull withdrawal "<<'\n';
-        std::cout<<"your new balance is "<<'$'<< balance <<'\n';
+        std::cout<<"your new balance is "<<'$'<<std::setprecision(2)<<std::fixed<< balance <<'\n';
     }
     return balance;
 }
